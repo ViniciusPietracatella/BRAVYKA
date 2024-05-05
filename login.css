@@ -1,0 +1,117 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: #1d2414;
+    color: white;
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+#logo {
+    max-height: 100px;
+}
+
+h1 {
+    margin: 5px 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 960px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info, .farms {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaço entre os itens da lista */
+}
+
+li a {
+    color: #0275d8;
+    text-decoration: none;
+    border: 1px solid #0275d8; /* Cor da borda alinhada com a cor do link */
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas para os links */
+    display: block; /* Garante que o padding e border afetem todo o link */
+    text-align: center; /* Centraliza o texto dentro do link */
+}
+
+li a:hover {
+    text-decoration: underline;
+    background-color: #f0f0f0; /* Cor de fundo no hover */
+}
+
+p {
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 10px;
+    }
+}
+
+.sensors {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens passem para a próxima linha em telas menores */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaço entre cada item do sensor */
+    margin-bottom: 20px; /* Espaçamento abaixo da seção de sensores */
+}
+
+
+.sensor-info img {
+    width: 150px; /* Reduzir o tamanho da imagem */
+    height: auto; /* Manter a proporção da imagem */
+    margin-right: 10px;
+    cursor: pointer; /* Indica que o elemento é clicável */
+}
+
+.sensor-info {
+    text-align: center; /* Centraliza o texto abaixo da imagem */
+    width: 120px; /* Define uma largura fixa para cada item de sensor para manter a uniformidade */
+}
+
+.sensor-info p {
+    overflow: hidden; /* Previne que o texto saia da caixa se for muito longo */
+    text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+    white-space: nowrap; /* Mantém o texto em uma única linha */
+}
+
+@media (max-width: 768px) {
+    .sensors {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sensor-info {
+        width: auto; /* Permite que os sensores ocupem a largura disponível em telas menores */
+    }
+}
